@@ -110,7 +110,7 @@ int main() {
 				
 				strcpy( temp, userName.c_str() );
 				
-				temp[0] = toupper( temp[0] );
+				temp[0] = toupper( temp[0] ); //Set first character as capital and then the rest as lowercase
 				for ( int i = 1; i < (int) strlen( temp ); i++ ) {
 					
 					temp[i] = tolower( temp[i] );
@@ -127,7 +127,7 @@ int main() {
 				
 				strcpy( temp, userName.c_str() );
 				
-				temp[0] = toupper( temp[0] );
+				temp[0] = toupper( temp[0] ); //Set first character as capital and then the rest as lowercase
 				for ( int i = 1; i < (int) strlen( temp ); i++ ) {
 					
 					temp[i] = tolower( temp[i] );
@@ -187,11 +187,7 @@ int main() {
 				tree.findByLast( userName ).editPosition( participant ); //Edits that data for the position on the tree
 				
 				//Prints out [First Name] [Last Name], [Activity], [Mins Done] = [Total Miles Calc]
-				
-				cout << "Num Act: " << tree.findByLast( userName ).getItem().getNumActivities() << endl;
-				cout << "Act: " << tree.findByLast( userName ).getItem().getActivity( tree.findByLast( userName ).getItem().getNumActivities() - 1 ).getActivityCode() << " Mins: ";
-				cout << tree.findByLast( userName ).getItem().getActivity( tree.findByLast( userName ).getItem().getNumActivities() - 1 ).getMinsDone() << endl << endl;
-				
+
 				cout << "Added " << tree.findByLast( userName ).getItem().getFirstName() << " " << tree.findByLast( userName ).getItem().getLastName() << ", ";
 				cout << tree.findByLast( userName ).getItem().getActivity( 0 ).getActivityName( tree.findByLast( userName ).getItem().getActivity( tree.findByLast( userName ).getItem().getNumActivities() - 1 ).getActivityCode() ) << " , ";
 				cout << tree.findByLast( userName ).getItem().getActivity( tree.findByLast( userName ).getItem().getNumActivities() - 1 ).getMinsDone() << " minutes = ";
